@@ -83,9 +83,9 @@ export class EditPatient extends Component{
   getMeasurement(){
     const patientID = this.props.match.params.patientID; 
     //this.props.getSpecPatient(patientID);
-    axios.get(`http://192.168.1.3:8000/api/getspecific/?id=${patientID}`).then(res=>{this.setState({patientOne:res.data});console.log(res.data)});
-            axios.all([axios.get(`http://192.168.1.3:8000/api/specrisk/?id_number=${patientID}`),
-           axios.get(`http://192.168.1.3:8000/api/specmeasure/?id_number=${patientID}`)])
+    axios.get(`http://icharmapi.herokuapp.com/api/getspecific/?id=${patientID}`).then(res=>{this.setState({patientOne:res.data});console.log(res.data)});
+            axios.all([axios.get(`http://icharmapi.herokuapp.com/api/specrisk/?id_number=${patientID}`),
+           axios.get(`http://icharmapi.herokuapp.com/api/specmeasure/?id_number=${patientID}`)])
      .then(axios.spread((firstResponse, secondResponse) => {  
          const risk = firstResponse.data
          const measure  =secondResponse.data
@@ -258,9 +258,9 @@ export class EditPatient extends Component{
     console.log(newRisk);
     
     const patientID = this.props.match.params.patientID;
-    axios.patch(`http://192.168.1.3:8000/api/measurement/${this.state.latest_id}/`,newRisk).then(res=>
+    axios.patch(`http://icharmapi.herokuapp.com/api/measurement/${this.state.latest_id}/`,newRisk).then(res=>
     {
-      axios.get(`http://192.168.1.3:8000/api/specmeasure/?id_number=${patientID}`).then(res=>
+      axios.get(`http://icharmapi.herokuapp.com/api/specmeasure/?id_number=${patientID}`).then(res=>
     { const measure = res.data;
       const lat_risk1 = measure.sort((a,b)=>(-1* (b.id-a.id))).map(data=>data.risk_proba1);
       const lat_risk0 = measure.sort((a,b)=>(-1* (b.id-a.id))).map(data=>data.risk_proba0);

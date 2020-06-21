@@ -6,28 +6,28 @@ import {tokenConfig} from './auth';
 
 //GET_PATIENTS
 export const getPatients = ()=>(dispatch,getState)=>{
-    axios.get('http://192.168.1.3:8000/api/getpatient/',tokenConfig(getState)).then(res=>{
+    axios.get('https://icharmapi.herokuapp.com/api/getpatient/',tokenConfig(getState)).then(res=>{
         dispatch({type:GET_PATIENTS,payload:res.data
 
                 });
     }).catch(err=>{console.log(err)});
 }
 export const searchPatient =name=>(dispatch,getState)=>{
-    axios.get(`http://192.168.1.3:8000/api/searchweb/?name=${name}`,tokenConfig(getState)).then(res=>{
+    axios.get(`https://icharmapi.herokuapp.com/api/searchweb/?name=${name}`,tokenConfig(getState)).then(res=>{
         console.log(res.data)
         dispatch({type:GET_PATIENTS,payload:res.data});
 
     }).catch(err=>{console.log(err)});
 }
 export const searchMedic =name=>(dispatch,getState)=>{
-    axios.get(`http://192.168.1.3:8000/api/getmedic/?name=${name}`,tokenConfig(getState)).then(res=>{
+    axios.get(`https://icharmapi.herokuapp.com/api/getmedic/?name=${name}`,tokenConfig(getState)).then(res=>{
         console.log(res.data)
         dispatch({type:GET_MEDICS ,payload:res.data});
     }).catch(err=>{console.log(err)});
 }
 export const addPatients = patrec =>(dispatch,getState)=>{
     
-    axios.post('http://192.168.1.3:8000/api/registerpatient/',patrec,tokenConfig(getState) ).then(res=>{
+    axios.post('https://icharmapi.herokuapp.com/api/registerpatient/',patrec,tokenConfig(getState) ).then(res=>{
         const array1 = [res.data]    
         //const array1 = [{username:"this.state.username",password:"this.state.password2",patientprofile:{name:"Unique",birthdate:"More"}}];
         const test = array1.map(function(test1){return{user_id:test1.patientprofile.user_id,name: test1.patientprofile.name,
@@ -57,7 +57,7 @@ export const alerto=()=>{
 }
 export const addMedic = patrec =>(dispatch,getState)=>{
         
-    axios.post('http://192.168.1.3:8000/api/registermedic/',patrec,tokenConfig(getState) ).then(res=>{
+    axios.post('https://icharmapi.herokuapp.com/api/registermedic/',patrec,tokenConfig(getState) ).then(res=>{
         const array1 = [res.data];
         console.log(array1);
         //const array1 = [{username:"this.state.username",password:"this.state.password2",patientprofile:{name:"Unique",birthdate:"More"}}];
@@ -89,7 +89,7 @@ export const addMedic = patrec =>(dispatch,getState)=>{
 }
 export const getSpecPatient = patientID =>(dispatch,getState)=>{
     
-    axios.get(`http://192.168.1.3:8000/api/getspecific/?id=${patientID}`,tokenConfig(getState) ).then(res=>{
+    axios.get(`https://icharmapi.herokuapp.com/api/getspecific/?id=${patientID}`,tokenConfig(getState) ).then(res=>{
         // const array1 = [res.data]    
         // //const array1 = [{username:"this.state.username",password:"this.state.password2",patientprofile:{name:"Unique",birthdate:"More"}}];
         // const test = array1.map(function(test1){return{user_id:test1.patientprofile.user_id,name: test1.patientprofile.name,
@@ -103,7 +103,7 @@ export const getSpecPatient = patientID =>(dispatch,getState)=>{
 }
 export const updatePatients = (patrec,id) =>(dispatch,getState)=>{
     
-    axios.patch(`http://192.168.1.3:8000/api/getallpatient/${id}/`,patrec,tokenConfig(getState) ).then(res=>{
+    axios.patch(`https://icharmapi.herokuapp.com/api/getallpatient/${id}/`,patrec,tokenConfig(getState) ).then(res=>{
         // const array1 = [res.data]    
         // //const array1 = [{username:"this.state.username",password:"this.state.password2",patientprofile:{name:"Unique",birthdate:"More"}}];
         // const test = array1.map(function(test1){return{user_id:test1.patientprofile.user_id,name: test1.patientprofile.name,
@@ -118,7 +118,7 @@ export const updatePatients = (patrec,id) =>(dispatch,getState)=>{
 
 export const getSpecMedic = patientID =>(dispatch,getState)=>{
     
-    axios.get(`http://192.168.1.3:8000/api/getmedicspecific/?id=${patientID}`,tokenConfig(getState) ).then(res=>{
+    axios.get(`https://icharmapi.herokuapp.com/api/getmedicspecific/?id=${patientID}`,tokenConfig(getState) ).then(res=>{
         // const array1 = [res.data]    
         // //const array1 = [{username:"this.state.username",password:"this.state.password2",patientprofile:{name:"Unique",birthdate:"More"}}];
         // const test = array1.map(function(test1){return{user_id:test1.patientprofile.user_id,name: test1.patientprofile.name,
@@ -133,7 +133,7 @@ export const getSpecMedic = patientID =>(dispatch,getState)=>{
 }
 export const updateMedics = (patrec,id) =>(dispatch,getState)=>{
     
-    axios.patch(`http://192.168.1.3:8000/api/getallmedic/${id}/`,patrec,tokenConfig(getState) ).then(res=>{
+    axios.patch(`https://icharmapi.herokuapp.com/api/getallmedic/${id}/`,patrec,tokenConfig(getState) ).then(res=>{
         // const array1 = [res.data]    
         // //const array1 = [{username:"this.state.username",password:"this.state.password2",patientprofile:{name:"Unique",birthdate:"More"}}];
         // const test = array1.map(function(test1){return{user_id:test1.patientprofile.user_id,name: test1.patientprofile.name,
@@ -147,7 +147,7 @@ export const updateMedics = (patrec,id) =>(dispatch,getState)=>{
 }
 export const getUserMeasure = () =>(dispatch,getState)=>{
     
-    axios.get('http://192.168.1.3:8000/api/measureuser/',tokenConfig(getState) ).then(res=>{
+    axios.get('https://icharmapi.herokuapp.com/api/measureuser/',tokenConfig(getState) ).then(res=>{
         // const array1 = [res.data]    
         // //const array1 = [{username:"this.state.username",password:"this.state.password2",patientprofile:{name:"Unique",birthdate:"More"}}];
         // const test = array1.map(function(test1){return{user_id:test1.patientprofile.user_id,name: test1.patientprofile.name,
@@ -161,7 +161,7 @@ export const getUserMeasure = () =>(dispatch,getState)=>{
 }
 export const updateRisk = (newRisk,id) =>(dispatch,getState)=>{
     
-    axios.patch(`http://192.168.1.3:8000/api/measurement/${id}/`,newRisk,tokenConfig(getState) ).then(res=>{
+    axios.patch(`https://icharmapi.herokuapp.com/api/measurement/${id}/`,newRisk,tokenConfig(getState) ).then(res=>{
         // const array1 = [res.data]    
         // //const array1 = [{username:"this.state.username",password:"this.state.password2",patientprofile:{name:"Unique",birthdate:"More"}}];
         // const test = array1.map(function(test1){return{user_id:test1.patientprofile.user_id,name: test1.patientprofile.name,

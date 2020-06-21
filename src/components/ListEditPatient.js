@@ -42,38 +42,38 @@ export class ListEditPatient extends Component{
 
   test120(){
     const send = {sugar:120}
-    axios.post('http://192.168.1.8:8000/api/loglog/',send).then(res=>console.log(res.data));
+    axios.post('http://icharmapi.herokuapp.com/api/loglog/',send).then(res=>console.log(res.data));
   }
   test140(){
     const send = {sugar:140}
-    axios.post('http://192.168.1.8:8000/api/loglog/',send).then(res=>console.log(res.data));
+    axios.post('http://icharmapi.herokuapp.com/api/loglog/',send).then(res=>console.log(res.data));
   }
   test160(){
     const send = {sugar:160}
-    axios.post('http://192.168.1.8:8000/api/loglog/',send).then(res=>console.log(res.data));
+    axios.post('http://icharmapi.herokuapp.com/api/loglog/',send).then(res=>console.log(res.data));
   }
   test180(){
     const send = {sugar:180}
-    axios.post('http://192.168.1.8:8000/api/loglog/',send).then(res=>console.log(res.data));
+    axios.post('http://icharmapi.herokuapp.com/api/loglog/',send).then(res=>console.log(res.data));
   }
   test200(){
     const send = {sugar:200}
-    axios.post('http://192.168.1.8:8000/api/loglog/',send).then(res=>console.log(res.data));
+    axios.post('http://icharmapi.herokuapp.com/api/loglog/',send).then(res=>console.log(res.data));
   }
   test220(){
     const send = {sugar:220}
-    axios.post('http://192.168.1.8:8000/api/loglog/',send).then(res=>console.log(res.data));
+    axios.post('http://icharmapi.herokuapp.com/api/loglog/',send).then(res=>console.log(res.data));
   }
   test240(){
     const send = {sugar:240}
-    axios.post('http://192.168.1.8:8000/api/loglog/',send).then(res=>console.log(res.data));
+    axios.post('http://icharmapi.herokuapp.com/api/loglog/',send).then(res=>console.log(res.data));
   }
   refresh1(){
     this.setState({refresh:!this.state.refresh})
       console.log("HIGH");
       const holder ="1";
       const send = {holder};
-      axios.post('http://192.168.1.8:8000/api/log/',send).then(res=>console.log(res.data))
+      axios.post('http://icharmapi.herokuapp.com/api/log/',send).then(res=>console.log(res.data))
     
     // else{
     //   console.log("LOW");
@@ -87,7 +87,7 @@ export class ListEditPatient extends Component{
       console.log("LOW");
       const holder ="0";
       const send = {holder};
-      axios.post('http://192.168.1.8:8000/api/log/',send).then(res=>console.log(res.data))
+      axios.post('http://icharmapi.herokuapp.com/api/log/',send).then(res=>console.log(res.data))
     
     // else{
     //   console.log("LOW");
@@ -100,9 +100,9 @@ export class ListEditPatient extends Component{
   componentDidMount(){
     const patientID = this.props.match.params.patientID; 
     //this.props.getSpecPatient(patientID);
-    axios.get(`http://192.168.1.8:8000/api/getspecific/?id=${patientID}`).then(res=>{this.setState({patientOne:res.data});console.log(res.data)});
-            axios.all([axios.get(`http://192.168.1.8:8000/api/specrisk/?id_number=${patientID}`),
-           axios.get(`http://192.168.1.8:8000/api/specmeasure/?id_number=${patientID}`)])
+    axios.get(`http://icharmapi.herokuapp.com/api/getspecific/?id=${patientID}`).then(res=>{this.setState({patientOne:res.data});console.log(res.data)});
+            axios.all([axios.get(`http://icharmapi.herokuapp.com/api/specrisk/?id_number=${patientID}`),
+           axios.get(`http://icharmapi.herokuapp.com/api/specmeasure/?id_number=${patientID}`)])
      .then(axios.spread((firstResponse, secondResponse) => {  
        this.setState({measurements:secondResponse.data});
          const risk = firstResponse.data

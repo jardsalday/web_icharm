@@ -35,7 +35,7 @@ export class AdminPatients extends Component{
         console.log("YEAH")
     }
     else{
-        axios.get(`http://192.168.1.3:8000/api/searchpatadmin/?name=${search}`).then(res=>{this.setState({all_patient:res.data})});
+        axios.get(`http://icharmapi.herokuapp.com/api/searchpatadmin/?name=${search}`).then(res=>{this.setState({all_patient:res.data})});
         if(this.state.currentPage!=1 && this.state.activeIndex!=1 ){
           this.setState({currentPage:1,activeIndex:1})
         }
@@ -50,7 +50,7 @@ export class AdminPatients extends Component{
     }
 clearName=e=>{
     e.preventDefault();
-    axios.get('http://192.168.1.3:8000/api/searchpatadmin/?name=12345').then(res=>{this.setState({all_patient:res.data})});
+    axios.get('http://icharmapi.herokuapp.com/api/searchpatadmin/?name=12345').then(res=>{this.setState({all_patient:res.data})});
       
 }
 onChange=e=> this.setState({[e.target.name]:e.target.value})   

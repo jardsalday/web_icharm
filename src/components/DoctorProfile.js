@@ -105,7 +105,7 @@ export class DoctorProfile extends Component{
       const old_password = password;
       const new_password = passwordsec;
       const patrec={old_password,new_password};
-      axios.put(`http://192.168.1.8:8000/api/changepw?id=${user_id}`,patrec).then(res=>{console.log(res.data);alert("Password Changed");});
+      axios.put(`http://icharmapi.herokuapp.com/api/changepw?id=${user_id}`,patrec).then(res=>{console.log(res.data);alert("Password Changed");});
       
       this.setState({password:'',passwordsec:'',changePW:false,edit:!this.state.edit});
   }

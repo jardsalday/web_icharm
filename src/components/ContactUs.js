@@ -120,7 +120,7 @@ export class ContactUs extends Component{
                             </div>
 
                             <div class = "row">
-                            <img class = "col ml" src="https://i.ibb.co/Y3sT8HL/facebook-icon-18-ffffff-22.png" alt=""/>
+                            <img class = "col ml" src="https://i.ibb.co/DQRxZFg/twitter-24-1.png" alt=""/>
                             <div class = "white-text col">@iCHARMPH</div><br/>
                             </div>
                             

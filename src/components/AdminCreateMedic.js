@@ -144,7 +144,7 @@ export class AdminCreatePatient extends Component{
   componentDidMount(){
       console.log(this.state.name);
     //axios.get(`http://192.168.1.9:8000/api/getspecific/?id=${patientID}`).
-    axios.get('http://192.168.1.3:8000/api/getmedic/').then(res=>{const pseudo = res.data;
+    axios.get('http://icharmapi.herokuapp.com/api/getmedic/').then(res=>{const pseudo = res.data;
     console.log(pseudo);
     const real = pseudo.map(data=>data.name);
     this.setState({real_medics:real})});

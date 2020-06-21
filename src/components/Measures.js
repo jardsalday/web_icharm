@@ -212,7 +212,7 @@ export class Measures extends Component{
                <span className="blue-text text-darken-4 glyphicon glyphicon-calendar"></span>
                 <label className="blue-text text-darken-4">Last Updated:</label>
                <label className="black-text">{created_at[0][0]}</label>
-               <label className="black-text">-9:15 AM</label>
+            
 
                <div className="right col" style={{marginRight:"0px"}} ><button id = "padright" className="list btn blue darken-4 lighten-3"><i className=" white-text glyphicon glyphicon-th-list"></i>{'  '}
         <Link to ="/listusermeasure">List </Link></button>

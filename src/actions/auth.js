@@ -38,7 +38,7 @@ export const loadUser = () => (dispatch, getState) => {
         config.headers['Authorization'] = `Token ${token}`;
     }
 
-    axios.get('http://192.168.1.3:8000/api/auth/user', config)
+    axios.get('https://icharmapi.herokuapp.com/api/auth/user', config)
         .then(res => {
             console.log(res.data.is_staff)
             if(res.data.is_staff){
@@ -82,7 +82,7 @@ export const login = (username,password) =>dispatch => {
     //If token, add to headers config
 
     const body = JSON.stringify({username,password})
-    axios.post('http://192.168.1.3:8000/api/auth/login',body, config)
+    axios.post('https://icharmapi.herokuapp.com/api/auth/login',body, config)
         .then(res => {
             if(res.data.user.is_staff){
                 console.log("DOCTOR")
@@ -143,7 +143,7 @@ export const tokenConfig = getState => {
 
   export const logout = () => (dispatch, getState) => {
     axios
-      .post('http://192.168.1.3:8000/api/auth/logout/', null, tokenConfig(getState))
+      .post('https://icharmapi.herokuapp.com/api/auth/logout/', null, tokenConfig(getState))
       .then((res) => {
         dispatch({ type: 'CLEAR_LEADS' });
         

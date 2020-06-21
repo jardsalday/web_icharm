@@ -125,7 +125,7 @@ savePassword=e=>{
             const old_password = password;
             const new_password = password2;
             const patrec={old_password,new_password};
-            axios.put(`http://192.168.1.3:8000/api/changepw?id=${id}`,patrec).then(res=>console.log(res.data));
+            axios.put(`http://icharmapi.herokuapp.com/api/changepw?id=${id}`,patrec).then(res=>console.log(res.data));
             alert("Password Changed");
             this.setState({password:'',passwordsec:'',changePW:false});
         }

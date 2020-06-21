@@ -37,7 +37,7 @@ export class MeasureAdd extends Component{
     const created_at1 = params.get('created_at')
     //this.setState({id_number:ID,systolic:systolic,diastolic:diastolic,pulse:pulse,weight:weight,cholesterol:cholesterol,nurse_in_charge:nurse_in_charge})
     const measures = {id_number:ID,systolic:systolic1,height:height1,weight:weight1,cholesterol:cholesterol1,birthdate:birthdate1,created_at:created_at1};
-    axios.post(`http://192.168.1.12:8000/api/measurement/`,measures).then(res=>{this.setState({patientOne:"Success"})});
+    axios.post(`http://icharmapi.herokuapp.com/api/measurement/`,measures).then(res=>{this.setState({patientOne:"Success"})});
   }
   
     paginate =(pageNumber) => this.setState({currentPage:pageNumber});

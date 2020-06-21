@@ -54,13 +54,13 @@ constructor(props)  {
     this.props.getUserMeasure();
     this.props.loadUser();
     
-    axios.get(`http://192.168.1.3:8000/api/getspecific/?id=${this.props.user.id}`)
+    axios.get(`http://icharmapi.herokuapp.com/api/getspecific/?id=${this.props.user.id}`)
     .then(res=>{
       const medic = res.data;
       console.log(medic);
       const medicreal = medic.map(function(data){return(data.owner_id)})
       console.log(medicreal[0]);
-      axios.get(`http://192.168.1.3:8000/api/medicforuser/?id=${medicreal[0]}`).then(res=>this.setState({medicOne:res.data}))
+      axios.get(`http://icharmapi.herokuapp.com/api/medicforuser/?id=${medicreal[0]}`).then(res=>this.setState({medicOne:res.data}))
       
     
     });

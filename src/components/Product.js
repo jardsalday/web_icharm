@@ -43,28 +43,30 @@ export class Product extends Component{
                         <div class = "produkto center">
                         <div><img src = "https://i.ibb.co/WxytVcB/macintosh-imac-g3-computer-monitor-white-imac-1.png" alt = "iCHARM Web" id = "webimg"></img></div>
                             <h4>Web Application</h4>
-                            <p><b>
+                            <p>
                                 The perfect application Doctors and other Medical Professionals to help them with decision making regarding Cardiovascular Diseases
-                                </b></p>
+                                </p>
                                 </div>
                         <div class = "produkto center">
                         <div><img src = "https://i.ibb.co/pQs0p7z/icharmchair.png" class="productimg" alt = "iCHARM Device"></img></div>
                             <h4>iCHARM Device</h4>
-                            <p><b>
+                            <p>
                                 Consisted of a Blood Pressure Monitor, Seated Weighing Scale, and a Glucometer to take the health measurements that are important for determing a patients CVD Risk
-                                </b></p>
+                                </p>
                             </div>
                         <div class = "produkto center">
                             <div><img src = "https://i.ibb.co/9cWwz4T/mobileproduct.png" alt = "iCHARM Mobile"></img></div>
                             <h4>Mobile Application</h4>
-                            <p><b>
+                            <p>
                                 Monitor your Cardiovascular Disease risk factors anywhere you go with the iCHARM Mobile App!
-                                </b></p>
+                                </p>
                             <a href = "" class = "blue-text">Download Now!</a>
                             </div>
 
 
                         </div>
+
+                        
 
 
                         {/* ---------------------FOOTER */}

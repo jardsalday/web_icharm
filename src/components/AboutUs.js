@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import {Link,NavLink} from 'react-router-dom';
+import AwesomeSlider from 'react-awesome-slider';
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import 'react-awesome-slider/dist/styles.css';
 
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 export class AboutUs extends Component{
 
     render(){
@@ -36,37 +40,53 @@ export class AboutUs extends Component{
 
                         <div class = "center"><h3>The Team</h3></div>
                         
-                        <div id = "slidee">
-                        <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                    <img src="https://i.ibb.co/rFBLN82/jaredd-1.png" alt=""/>
-                                    <div class="caption right-align">
-                                        <h3>Jared Alday</h3>
-                                        <h5 class="light grey-text text-lighten-3"><b>Mobile Developer/Lead Designer</b></h5>
-                                    </div>
-                                    </li>
-                                    <li>
-                                    <img src="https://i.ibb.co/Z6HHd2c/vincent.png" alt=""/>
-                                    <div class="caption left-align">
-                                        <h3>Vincent Calingasan</h3>
-                                        <h5 class="light grey-text text-lighten-3"><b>Machine Learning/Web Developer</b></h5>
-                                    </div>
-                                    </li>
-                                    <li>
-                                    <img src="https://i.ibb.co/z69TWh6/mark-1.png" alt=""/>
-                                    <div class="caption right-align">
-                                        <h3>Mark Matibag</h3>
-                                        <h5 class="light grey-text text-lighten-3"><b>Mobile Developer/QA Manager</b></h5>
-                                    </div>
-                                    </li>
-                                </ul>
-                                </div>
-                                </div>
+                        <div id = "slidee">       
+
+                            {/* <AutoplaySlider
+                            id="aboutus"
+                            // fillParent={true}
+                            bullets={false}
+                            mobileTouch={true}
+                                play={true}
+                                cancelOnInteraction={false} // should stop playing on user interaction
+                                interval={6000}
+                            >
+                                <div data-src="https://i.ibb.co/rFBLN82/jaredd-1.png" />
+                                <div data-src="https://i.ibb.co/Z6HHd2c/vincent.png" />
+                                <div data-src="https://i.ibb.co/z69TWh6/mark-1.png" />
+                            </AutoplaySlider> */}
+                            <div class = "produkto1 center">
+                        
+                            </div>
+                    <div class = "produkto11 center">
+                    
+                    <div class="slider">
+                   
+                    <AutoplaySlider
+                        id = "slidee"
+                        organicArrows={false}
+                        bullets={false}
+                        mobileTouch={true}
+                            play={true}
+                            cancelOnInteraction={false} // should stop playing on user interaction
+                            interval={6000}
+                        >
+                            <div data-src="https://i.ibb.co/rFBLN82/jaredd-1.png" />
+                                <div data-src="https://i.ibb.co/Z6HHd2c/vincent.png" />
+                                <div data-src="https://i.ibb.co/z69TWh6/mark-1.png" />
+                        </AutoplaySlider>
+                            </div>
+                        </div>
+
+
+                        <div class = "produkto1 center">
+                        
+                        </div>
 
 
 
-
+                        </div>
+                        
 
 
 

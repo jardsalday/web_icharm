@@ -14,7 +14,7 @@ export class MeasureList extends Component{
     componentDidMount(){
         const patientID = this.props.match.params.id; 
         
-        axios.get('http://192.168.1.5:8000/api/measurement/').then(res=>{this.setState({patientMeasures:res.data})})
+        axios.get('http://icharmapi.herokuapp.com/api/measurement/').then(res=>{this.setState({patientMeasures:res.data})})
           
       }
     
