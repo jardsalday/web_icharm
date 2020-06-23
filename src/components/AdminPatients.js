@@ -88,7 +88,6 @@ onChange=e=> this.setState({[e.target.name]:e.target.value})
                                 <i class="material-icons">menu</i>
                                 </a>
                                 <ul class="right hide-on-med-and-down">
-                                <li><NavLink to ="/adminhome" className="blue-text text-darken-4" ><span className="glyphicon glyphicon-home blue-text text-darken-4"></span>Home</NavLink></li>
              			<li> <Link to ="/adminpatients" className="btn blue white-text darken-4" ><span className="glyphicon glyphicon-th-list"></span>Patients Records</Link></li>
                    <li> <Link to ="/adminmedics" className="blue-text text-darken-4  "  ><span className="blue-text text-darken-4   glyphicon glyphicon-globe"></span>Medics Records</Link></li>
                    <li><NavLink to ="/medicprofile" className="blue-text text-darken-4  "  ><span className="blue-text text-darken-4   glyphicon glyphicon-user"></span> Profile</NavLink></li>
@@ -100,7 +99,8 @@ onChange=e=> this.setState({[e.target.name]:e.target.value})
 
                         <ul class="sidenav" id="mobile-links">
                             <li><Link to ="/adminpatients">Patient Records</Link></li>
-            			<li> <Link to ="/adminmedics">Medical Workers</Link></li>
+            			          <li> <Link to ="/adminmedics">Medical Workers</Link></li>
+                            <li> <Link to ="/medicprofile">Profile</Link></li>
                                 <li><a onClick={this.props.logout.bind(this)} href="/login" class="btn white red-text"> Logout</a></li>
                         </ul>
                 <br></br>

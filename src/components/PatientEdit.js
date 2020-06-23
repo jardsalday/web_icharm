@@ -267,13 +267,13 @@ constructor(props){
                
                 <div  style={{position:"relative",border:"2px solid #0d47a1",borderRadius:"7px",borderBottom:"5px solid #0d47a1"}} className="col-lg-5  white edit-data">
                 <div className="blue darken-4  center header-edit" style={{borderTopLeftRadius:"5px",marginTop:"-29px",marginLeft:"-16px",width:"105.2%",backgroundColor:"linear-gradient(to left, #80deea  0%,#00bcd4   100%);"}}>
-                <span><h3 className="white-text">PATIENT DETAILS
+                <span><h4 className="white-text">PATIENT DETAILS
                 <span style={{height:"50px",marginRight:"10px",borderLeft:"1px solid white",paddingLeft:"10px"}} className={this.state.edit?"editprofile  white-text right":"editprofile  white-text lighten-2 white-text right"} 
                 onClick={this.state.edit?this.saveData.bind(this):this.editData.bind(this)}>
                     {this.state.edit?<i className=" nav-gear	glyphicon glyphicon-ok white-text"></i>
                     :<i className=" nav-gear	glyphicon glyphicon-pencil white-text"></i>}
                     </span>
-                </h3></span>
+                </h4></span>
                
                 
                 </div>

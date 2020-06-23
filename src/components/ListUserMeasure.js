@@ -129,10 +129,12 @@ export class ListUserMeasure extends Component{
                          </ul>           
                          <div className="row">
          <div className=" white col-lg-1 cold-md-12 col-sm-12 col-6  date-time-card" style={{borderRadius:"5px",border:"1px solid #0d47a1",borderBottom:"3px solid #0d47a1",borderTop:"3px solid #0d47a1"}}>
+               
+                {/* <label className="blue-text  text-darken-4">Name:</label>
+               <label className="black-text">{created_at[0][0]}</label> */}
                <span className="blue-text  text-darken-4 glyphicon glyphicon-calendar"></span>
-                <label className="blue-text  text-darken-4">Last Updated:</label>
+               <label className="blue-text  text-darken-4">Last Updated:</label>
                <label className="black-text">{created_at[0][0]}</label>
-               {/* <label className="black-text">-9:15 AM</label> */}
                <div className="list-graph right col" style={{marginRight:"0px"}} ><button id = "padright" className="list btn blue darken-4 lighten-3"><i className=" white-text glyphicon glyphicon-th-list"></i>{'  '}
         <Link to ="/listusermeasure">List</Link></button>
         <button className="chart btn blue darken-4 lighten-3"id = "padright"><i className=" white-text glyphicon glyphicon-signal"></i>{'  '}<Link to="/usermeasures">Graph </Link></button>
@@ -172,14 +174,14 @@ export class ListUserMeasure extends Component{
                 
         {currentTodos.map(data=>(<tr>
             <td>{data.created_at}</td>
-            <td className="black-text text-darken-2">{data.systolic}</td>
-            <td className="black-text text-darken-2">{data.diastolic}</td>
-            <td className="black-text text-darken-2">{data.cholesterol}</td>
-            <td className="black-text text-darken-2">{data.weight}</td>
-            <td  className="black-text text-darken-2">{data.BMI}</td>
-            <td className="red-text text-lighten-2">{data.risk_proba1}</td>
-            <td className="green-text ">{data.risk_proba0}</td>
-        <td className="blue-text  text-darken-4">{data.risk=='1'?"HIGH":"LOW"}</td>
+            <td className="black-text text-darken-2"><b>{data.systolic} mmHg</b></td>
+            <td className="black-text text-darken-2"><b>{data.diastolic} mmHg</b></td>
+            <td className="black-text text-darken-2"><b>{data.cholesterol} mg/dL</b></td>
+            <td className="black-text text-darken-2"><b>{data.weight} kg</b></td>
+            <td  className="black-text text-darken-2"><b>{data.BMI}</b></td>
+            <td className="red-text text-lighten-2"><b>{data.risk_proba1}%</b></td>
+            <td className="green-text "><b>{data.risk_proba0}%</b></td>
+        <td className="blue-text  text-darken-4"><b>{data.risk=='1'?"HIGH":"LOW"}</b></td>
 
 
             </tr>

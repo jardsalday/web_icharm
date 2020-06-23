@@ -91,7 +91,7 @@ export class ContactUs extends Component{
                                 </div>
 
                                 </div>
-                                <button class="btn waves-effect waves-light">Submit</button>
+                                <button class="btn waves-effect waves-light green darken-1">Submit</button>
 
                             </form>
  
@@ -108,20 +108,23 @@ export class ContactUs extends Component{
                         <h4 class = "white-text">Contact Information</h4><br/>
                             
                             <div class = "row">
-                            <i class="material-icons white-text col">place</i><div class = "white-text col">145 Pearl Lane, Mt. View Park Subd., Batangas City, Batangas 4200</div><br/>
+                            <i class="material-icons white-text col">place</i><div class = "white-text col"><label class = "white-text thin">
+                                Mt. View Park Subd., Batangas City</label></div><br/>
                             </div>
 
                             <div class = "row">
-                            <i class="material-icons white-text col">phone</i><div class = "white-text col">09360568625</div><br/>
+                            <i class="material-icons white-text col">phone</i><div class = "white-text col"><label class = "white-text thin">
+                                09360568625</label></div><br/>
                             </div>
 
                             <div class = "row">
-                            <i class="material-icons white-text col">local_post_office</i><div class = "white-text col">contactus.icharm@gmail.com</div><br/>
+                            <i class="material-icons white-text col">local_post_office</i><div class = "white-text col"><label class = "white-text thin">
+                                contactus.icharm@gmail.com</label></div><br/>
                             </div>
 
                             <div class = "row">
                             <img class = "col ml" src="https://i.ibb.co/DQRxZFg/twitter-24-1.png" alt=""/>
-                            <div class = "white-text col">@iCHARMPH</div><br/>
+                            <div class = "white-text col"><label class = "white-text thin">@iCHARMPH</label></div><br/>
                             </div>
                             
         

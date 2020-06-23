@@ -1250,16 +1250,14 @@ a:link{
 
 .produkto11{
     flex:3;
-
-    /* border-width: 10px; */
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    /* background-color:white; */
-    /* margin-right:10px; */
-    width: 1000px;
+    border-radius: 50px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:white;
+    margin-right:10px;
+    width: 900px;
     border:1px;
     padding:0px;
-    /* border-style: solid; */
-    /* border-color: black; */
 }
 
 #hu{
@@ -1384,7 +1382,7 @@ a:link{
 }
 
 #titlesize{
-    font-size: 25px;
+    font-size: 20px;
     padding-left: 18px;
 }
 

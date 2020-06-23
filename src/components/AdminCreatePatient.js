@@ -245,13 +245,13 @@ getAge(bday){
                             
                                     <div className = "row">
                         <div className="col s9">
-                        <label><h6>Name</h6></label>
+                        <label><h6 className="black-text">Name</h6></label>
                         <input type = "text" name="name" onChange = {this.onChange} value={name}></input>
                 {this.state.errName?<h6 className="errsize grey-text">Must not be blank or Name already exists</h6>:null}
                             </div>
                             <div className="col s3">
                                 
-                            <label><h6>Birthday</h6></label>
+                            <label><h6 className="black-text">Birthday</h6></label>
                             <br/>
                             <input type="text" name = "month" value={month} onChange={this.onChange}></input>
                             
@@ -285,41 +285,41 @@ getAge(bday){
                             </div> */}
                            
                             <div className="col s2">
-                            <label><h6>Height</h6></label>
+                            <label><h6 className="black-text">Height</h6></label>
                             <input type = "text" name="height" onChange = {this.onChange} value={height}></input>
                             {this.state.errHeight?<h6 className="errsize red-text">Must not be blank</h6>:null}
                             </div>
                             <div className="col s4">
-                            <label><h6>Sex</h6></label>
+                            <label><h6 className="black-text">Gender</h6></label>
                             <br></br>
                             <div onClick={this.setMale.bind(this)} className={this.state.clickSex?"btn blue darken-4  white-text":"btn black-text white"}>Male</div>
                             <div onClick={this.setFemale.bind(this)} className={this.state.clickSex?"btn white black-text":"btn blue darken-4  "}>Female</div>
                             
                             {this.state.errSex?<h6 className="errsize red-text">Must not be blank</h6>:null}
                             </div>
-                            <div className="col s3"><label><h6>Diabetic?</h6></label>
+                            <div className="col s3"><label><h6 className="black-text">Diabetic</h6></label>
                             <br></br>
                             <div onClick = {this.setDiaNo.bind(this)} className={this.state.clickDia?"btn blue darken-4  ":"btn white black-text"}>No</div>
                            
                             <div onClick = {this.setDiaYes.bind(this)} className={this.state.clickDia?"btn white black-text":"btn blue darken-4  "}>Yes</div>
                              {this.state.errDia?<h6 className="errsize red-text">Must not be blank</h6>:null}
                             </div>
-                            <div className="col s3"><label><h6>Smoker?</h6></label>
+                            <div className="col s3"><label><h6 className="black-text">Smoker</h6></label>
                             <br></br>
                             <div onClick = {this.setSmNo.bind(this)}  className={this.state.clickSmoke?"btn blue darken-4  ":"btn white black-text"}>No</div>
                             <div onClick = {this.setSmYes.bind(this)}  className={this.state.clickSmoke?"btn black-text white":"btn blue darken-4  white-text"}>Yes</div>
-                          {/* <div onClick = {this.setSmNo.bind(this)}  className={this.state.clickSmoke?"btn white black-text":"btn blue darken-4  "}>No</div> */}
+                          
                             {this.state.errDia?<h6 className="errsize grey-text">Must not be blank</h6>:null}
                             </div>
                             </div>
                             <div className="row">
                             <div className="col s6">
-                            <label><h6>Address</h6></label>
+                            <label><h6 className="black-text">Address</h6></label>
                             <input type = "text" name="address" onChange = {this.onChange} value={address}></input>
                             {this.state.errAddress?<h6 className="errsize grey-text">Must not be blank</h6>:null}
                            </div>
                            <div className="col s6">
-                            <label><h6>Email</h6></label>
+                            <label><h6 className="black-text">Email</h6></label>
                                <input type ="text" name="email" onChange={this.onChange} value={email}></input>
                                {this.state.errMail?<h6 className="errsize grey-text">Must not be blank</h6>:null}
                                
@@ -327,17 +327,17 @@ getAge(bday){
                            </div>
                             <div className="row">
                            
-                            <div className="col s4"><label><h6>Phone Number</h6></label>
+                            <div className="col s4"><label><h6 className="black-text">Phone Number</h6></label>
                             <input type = "text" name = "phone_number" onChange = {this.onChange} value ={phone_number}></input>
                             {this.state.errPhone?<h6 className="errsize grey-text">Must not be blank</h6>:null}
                             </div>
                             <div className="col s4">
-                            <label><h6 className="green-text">Usename</h6></label>
+                            <label><h6 className="black-text">Username</h6></label>
                             <input type = "text" name = "username" onChange={this.onChange} value={username}></input>
                             {this.state.errUser?<h6 className="errsize grey-text">Must not be blank or User Already Exist</h6>:null}
                             </div>
                             <div className="col s4">
-                            <label><h6 className="green-text">Password</h6></label>    
+                            <label><h6 className="black-text">Password</h6></label>    
                             <input type = "password" name = "password" onChange = {this.onChange} value = {password}></input>
                             {this.state.errPass?<h6 className="errsize grey-text">Must not be blank</h6>:null}            
                             </div>

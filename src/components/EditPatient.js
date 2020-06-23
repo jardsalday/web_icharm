@@ -368,19 +368,19 @@ handleClick(event) {
                          </ul>
                          <div className="white header-pat" 
                          style={{borderRadius:"5px",border:"1px solid #0d47a1",borderBottom:"3px solid #0d47a1",borderTop:"3px solid #0d47a1"}}>
-              <span className="blue-text text-darken-4 pat_info	glyphicon glyphicon-user"></span><label className="blue-text text-darken-4">Name:<test className="black-text text-darken-4">{this.state.patientOne.map(data=>data.name)}</test></label>
-              <span className="blue-text text-darken-4 pat_info		glyphicon glyphicon-calendar"></span><label className="blue-text text-darken-4  ">Birthdate:<test className="black-text text-darken-4">{this.state.patientOne.map(data=>data.birthdate)}</test></label>
-              <span className="blue-text text-darken-4 pat_info	glyphicon glyphicon-time"></span><label></label ><i className="blue-text text-darken-4 " >Age:<test className="black-text text-darken-4">{this.state.patientOne.map(data=>data.age)}</test></i>
-              <span className="blue-text text-darken-4 pat_info	fas fa-venus-mars"></span> <label></label><i className="blue-text text-darken-4">Sex:<test className="black-text text-darken-4">{this.state.patientOne.map(data=>data.sex)}</test></i>
-              <span className="blue-text text-darken-4 pat_info 	glyphicon glyphicon-tint"></span><i className="blue-text text-darken-4">Diabetic:<test className="black-text text-darken-4">{main_diabetes==1?"NO":"YES"}</test></i>
-              <span className="blue-text text-darken-4 pat_info 	glyphicon glyphicon-alert"></span><i className="blue-text text-darken-4">Smoker:<test className="black-text text-darken-4">{this.state.patientOne.map(data=>data.smoker)==1?"YES":"NO"}</test></i>
+              <span className="blue-text text-darken-4 pat_info	glyphicon glyphicon-user"></span><label className="blue-text text-darken-4">Name:<test className="black-text text-darken-4 thin"> {this.state.patientOne.map(data=>data.name)}</test></label>
+              <span className="blue-text text-darken-4 pat_info		glyphicon glyphicon-calendar"></span><label className="blue-text text-darken-4  ">Birthdate:<test className="black-text text-darken-4 thin"> {this.state.patientOne.map(data=>data.birthdate)}</test></label>
+              <span className="blue-text text-darken-4 pat_info	glyphicon glyphicon-time"></span><label></label ><i className="blue-text text-darken-4 " >Age:<test className="black-text text-darken-4 thin"> {this.state.patientOne.map(data=>data.age)}</test></i>
+              <span className="blue-text text-darken-4 pat_info	fas fa-venus-mars"></span> <label></label><i className="blue-text text-darken-4">Gender:<test className="black-text text-darken-4 thin"> {this.state.patientOne.map(data=>data.sex)}</test></i>
+              <span className="blue-text text-darken-4 pat_info 	glyphicon glyphicon-tint"></span><i className="blue-text text-darken-4">Diabetic:<test className="black-text text-darken-4 thin"> {main_diabetes==1?"NO":"YES"}</test></i>
+              <span className="blue-text text-darken-4 pat_info 	glyphicon glyphicon-alert"></span><i className="blue-text text-darken-4">Smoker:<test className="black-text text-darken-4 thin"> {this.state.patientOne.map(data=>data.smoker)==1?"YES":"NO"}</test></i>
               <button onClick={this.getMeasurement.bind(this)}className="btn blue darken-4 right" style={{marginTop:"2px",paddingTop:"2px"}}><span className="	glyphicon glyphicon-refresh white-text"></span></button>
                         </div>
                          <div className="row">
                             <div className="col-lg-2 new_measure_card  white" style={{textAlign:"center", borderTopLeftRadius:"5px",borderTopRightRadius:"5px",borderBottomLeftRadius:"5px",borderBottomRightRadius:"5px",borderBottom:"5px solid #0d47a1 "}}>
                
         <div className="blue darken-4 "style={{paddingLeft:"10px",borderTopLeftRadius:"5px",borderTopRightRadius:"5px"}}>
-        <label><h6 className="white-text text-darken-4" style={{fontSize:"20px"}}><b>BP:</b><test className="white-text text-darken-4">{
+        <label><h6 className="white-text text-darken-4 thin" style={{fontSize:"20px"}}>BP: <test className="white-text text-darken-4">{
         this.state.displaysys}/{this.state.displaydia}{'  '}hg/dl</test></h6></label>
         </div>
                 <Line option={{
@@ -466,14 +466,14 @@ handleClick(event) {
                 
        
                 {currentTodos.map(data=>(<tr key={data.id}>
-            <td className="white black-text">{data.created_at}</td>
-            <td className="white black-text text-darken-4"><b>{data.systolic}</b></td>
-            <td className="white black-text text-darken-4"><b>{data.diastolic}</b></td>
-            <td className="white black-text text-darken-4"><b>{data.cholesterol}</b></td>
-            <td className="white black-text text-darken-4"><b>{data.weight}</b></td>
+            <td className="white black-text text-darken-4"><b>{data.created_at}</b></td>
+            <td className="white black-text text-darken-4"><b>{data.systolic} mmHg</b></td>
+            <td className="white black-text text-darken-4"><b>{data.diastolic} mmHg</b></td>
+            <td className="white black-text text-darken-4"><b>{data.cholesterol} mg/dL</b></td>
+            <td className="white black-text text-darken-4"><b>{data.weight} kg</b></td>
             <td  className="white black-text text-darken-4"><b>{data.BMI}</b></td>
-            <td className="white green-text text-darken-3"><b>{data.risk_proba0}</b></td>
-            <td className="white red-text text-darken-1"><b>{data.risk_proba1}</b></td>
+            <td className="white green-text text-darken-3"><b>{data.risk_proba0}%</b></td>
+            <td className="white red-text text-darken-1"><b>{data.risk_proba1}%</b></td>
         <td className="white blue-text text-darken-4"><b>{data.risk=='1'?"HIGH":"LOW"}</b></td>
 
 

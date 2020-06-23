@@ -46,7 +46,7 @@ export class Home extends Component{
                         
                             <h3>The Beat Goes On...</h3>
                             <p id = "homequote">
-                                "Aaa machine that supports cardiovascular health decision making by providing insights through technological innovations."
+                                "A machine that supports cardiovascular health decision making by providing insights through technological innovations."
                             </p>
                                 </div>
                         <div class = "produkto center">

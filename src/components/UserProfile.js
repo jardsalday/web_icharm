@@ -180,7 +180,7 @@ export class UserProfile extends Component{
                           
                            </div>  <div className={this.state.edit?"card-edit-pro":"card-pro"}  style={{borderRadius:"6px"}}><ul className={this.state.edit?"puserprofile green-text text-darken-1":" userprofile white-text text-darken-1"} style={this.state.edit?null:{paddingLeft:"20px",paddingTop:"20px"}}>
                              
-        <li><h5><i className="glyphicon glyphicon-user white-text"></i> Username:<uu     className={this.state.edit?"blue-text text-darken-4":"white-text"}>{this.props.user.username}</uu></h5></li> 
+        <li><h5><i className="glyphicon glyphicon-user white-text"></i> Username:<label className={this.state.edit?"blue-text text-darken-4":"white-text"}>{this.props.user.username}</label></h5></li> 
                            <li><h5><i className="	glyphicon glyphicon-envelope white-text"></i> Email:<uu     className="email-profile white-text">{'                                                  '}
                            {this.state.edit?<input type="text" name="email" style={{color:"green"}} onChange={this.onChange} value={email}></input>:this.props.patientOnes.map(data=>data.email)}</uu>
                            </h5></li>
@@ -210,15 +210,15 @@ export class UserProfile extends Component{
                          </div>
 
 
-{/* ---------------------FOOTER */}
+                {/* ---------------------FOOTER */}
 
-<div class = "foot blue darken-4">
-                                <footer id = "footerdiv">
-                        <div class="footer-copyright blue darken-4">
-            <div class="container white-text center">
-            <b class = "copy">© iCHARM 2020</b>
-            </div>
-                </div></footer></div>
+                <div class = "foot white darken-4">
+                  <footer id = "footerdiv">
+                    <div class="footer-copyright white darken-4">
+                    <div class="container blue-text text-darken-4 center">
+                     <b class = "copy">© iCHARM 2020</b>
+                  </div>
+               </div></footer></div>
 
                 
       </div>

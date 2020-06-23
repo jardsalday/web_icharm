@@ -89,9 +89,9 @@ export class PatientComponent extends Component{
                                 <i class="material-icons">menu</i>
                                 </a>
                                 <ul class="right hide-on-med-and-down">
-                                <li><NavLink to ="/patient" className="try" activeClassName="btn blue darken-4 white-text "><span className="glyphicon glyphicon-align-left"></span>Patient Records</NavLink></li>
-            			<li> <Link to ="/medicprofile" className="blue-text text-darken-4"><span className="	glyphicon glyphicon-user"></span>Profile</Link></li>
-                                <li><Link onClick = {this.props.logout.bind(this)} to="/" class="blue-text text-darken-4"><span className="glyphicon glyphicon-log-out"></span>Logout</Link></li>
+                                <li><NavLink to ="/patient" className="try" activeClassName="btn blue darken-4 white-text "><span className="glyphicon glyphicon-align-left"></span> Patient Records</NavLink></li>
+            			<li> <Link to ="/medicprofile" className="blue-text text-darken-4"><span className="	glyphicon glyphicon-user"></span> Profile</Link></li>
+                                <li><Link onClick = {this.props.logout.bind(this)} to="/" class="blue-text text-darken-4"><span className="glyphicon glyphicon-log-out"></span> Logout</Link></li>
                                 </ul>
                             </div>
                             </nav>
@@ -122,7 +122,7 @@ export class PatientComponent extends Component{
                   <table className="tblsearch">
                   <tr>
                   <td><input className="searchbox" type="text" onChange={this.onChange} name="search" value={search}/></td> 
-                <td><button className="searchbtn btn blue darken-4 white-text" onClick={this.searchName.bind(this)}><span className="glyphicon glyphicon-search"></span></button>
+                  <td><button className="searchbtn btn blue darken-4 white-text" onClick={this.searchName.bind(this)}><span className="glyphicon glyphicon-search"></span></button>
                     </td>
                     <td>
                     <button onClick={this.clearName.bind(this)} className="clearbtn btn grey darken-3 white-text">CLEAR</button>
@@ -132,7 +132,6 @@ export class PatientComponent extends Component{
                   
                   </div>
                   </div>  
-                   {/* ?<div className="col-lg-1 "><button onClick={this.clearName.bind(this)} className="clearbtn btn grey white-text">CLEAR</button></div>    */}
                     <table className="table table-striped table-hover table-condensed black-text" style={{color:"black"}} ref={el =>this.el = el} >
                         <thead>
             <tr>

@@ -41,7 +41,6 @@ import AdminHome from './components/AdminHome';
 const alertOptions = {
   timeout:3000,
   position:'top center'
-
 }
 
 export class App extends Component {
@@ -53,14 +52,8 @@ export class App extends Component {
   return (
    <Provider store={store}>
     <AlertProvider template={AlertTemplate} {...alertOptions}>
-    
-    {/* <Alerts/> */}
-    
-         
- <Router>
    
-  
-  {/* <Alerts/> */}
+  <Router>
    <div className ="Main_Content">
    <Switch>
    
@@ -107,9 +100,3 @@ export class App extends Component {
 }}
 
 export default App;
-/*<Route path="/editpatient/:id" component={EditPatientComponent}/>
-    <Route path = "/createpatient" component = {CreatePatientComponent}/>
-    <Route path = "/viewpatient/:id" component = {ViewPatientComponent}/>
-    <Route path ="/viewadmin/:id" component = {ViewAdmin}/>
-    <Route path = "/createpatient" component = {CreateAdmin}/>
-    <Route path = "/editadmin/:id" component = {EditAdmin}/>*/

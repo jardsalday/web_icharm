@@ -33,7 +33,7 @@ export class Login extends Component{
             return <Redirect to="/patient"/>
         }
         if(this.props.isAdmin){
-            return <Redirect to="/adminhome"/>
+            return <Redirect to="/adminpatients"/>
         }
     console.log(this.props.isDoctor)
         const {username,email,password,password2}=this.state;

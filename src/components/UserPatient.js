@@ -64,14 +64,7 @@ constructor(props)  {
       
     
     });
-   // const medic = this.state.patientOne.map(data=>data.owner_id);
-    
-  // axios.get(`http://192.168.1.8:8000/api/medicforuser/?id=${}`).then(res=>this.setState({medicOne:res.data}));
-
   }
-  
-  
-  
   
     render(){
       console.log(this.state.medicOne);
@@ -89,9 +82,7 @@ constructor(props)  {
       const created_at = [this.props.measures.sort((a,b)=>(-1*(a.id-b.id))).map(data=>data.created_at)]
       
         return (
-            <div className="background  ">
-            
-            
+            <div className="background ">
 
              <div class="navbar-fixed">
              <nav class="nav-wrapper white">
@@ -105,7 +96,7 @@ constructor(props)  {
              			<li> <Link to ="/listusermeasure" className="blue-text text-darken-4"><span className=" blue-text text-darken-4 glyphicon glyphicon-th-list"></span> Measures</Link></li>
                    
                    <li> <Link to ="/userprofile" className="blue-text text-darken-4"><span className="blue-text text-darken-4	glyphicon glyphicon-user"></span> Profile</Link></li>
-                   <li><Link onClick = {this.props.logout.bind(this)} to="/" class="blue-text text-darken-4"><span className="glyphicon glyphicon-log-out"></span>Logout</Link></li>
+                   <li><Link onClick = {this.props.logout.bind(this)} to="/" class="blue-text text-darken-4"><span className="glyphicon glyphicon-log-out"></span> Logout</Link></li>
                     </ul>
                              </div>
                              </nav>
@@ -118,7 +109,6 @@ constructor(props)  {
                 <li><a href="/" class="btn white red-text text-lighten-2">Logout</a></li>
                          </ul> 
                          
-
                          {/* lamaaaaaaaaaaaaaaaaaaaaan */}
 
                          <div class = "contenty">
@@ -129,10 +119,13 @@ constructor(props)  {
                         <div class = "blue darken-4" style={{borderTopLeftRadius:"5px",borderTopRightRadius:"5px"}}><label class = "white-text" id = "titlesize"> <i className=" nav-gear	glyphicon glyphicon-cog white-text"></i> Navigation Guide</label></div>
                         <div>
                         <ul className="black-text text-darken-3">
-                              <li><i className="	glyphicon glyphicon-home blue-text text-darken-4" id = "navs"></i>press to go to Homepage</li>
-                              <li><i className="glyphicon glyphicon-list blue-text text-darken-4" id = "navs"></i>press to go to Measures</li>
+                              <li><i className="	glyphicon glyphicon-home blue-text text-darken-4" id = "navs"></i>
+                              <label class = "black-text text-darken-3 thin"> -press to go to Homepage</label></li>
+                              <li><i className="glyphicon glyphicon-list blue-text text-darken-4" id = "navs"></i>
+                              <label class = "black-text text-darken-3 thin"> -press to go to Measures</label></li>
                               
-                              <li><i className="glyphicon glyphicon-user blue-text text-darken-4" id = "navs"></i>press to go to Profile</li>
+                              <li><i className="glyphicon glyphicon-user blue-text text-darken-4" id = "navs"></i>
+                              <label class = "black-text text-darken-3 thin"> -press to go to Profile</label></li>
                               </ul>
                         
                         </div>
@@ -141,7 +134,7 @@ constructor(props)  {
                         </div>
                         <div class = "produkto11 left" style={{borderRadius:"5px"}}>
                         <div class = "blue darken-4" style={{borderTopLeftRadius:"5px",borderTopRightRadius:"5px"}} id = "hu"><label class = "white-text" id = "titlesize"> <i className=" nav-gear	glyphicon glyphicon-heart white-text"></i> Your CVD Risk</label></div>
-        <div class = "center"><h4><b>{risk_proba1[0][0]}</b></h4><br/><label class = "black-text">{risk[0][0]==null?null:risk[0][0]==1?"HIGH RISK":"LOW RISK"}</label><br/>{created_at[0][0]}</div>
+        <div class = "center"><h4><b>{risk_proba1[0][0]}</b></h4><label class = "black-text">{risk[0][0]==null?null:risk[0][0]==1?"HIGH RISK":"LOW RISK"}</label><br/>{created_at[0][0]}</div>
                             </div>
                         
 
@@ -158,26 +151,26 @@ constructor(props)  {
                         <div class = "produkto11 left" style={{borderRadius:"5px"}}>
                         <div class = "blue darken-4"><label class = "white-text" id = "titlesize"> <i className=" nav-gear	glyphicon glyphicon-stats white-text"></i> Recent Measurements</label></div>
                         <div class = "left" id = "lefty"> 
-                            <label class = "black-text text-darken-3">Date:{created_at[0][0]}</label><br/>
-                            <label class = "black-text text-darken-3">Systolic:{sys[0][0]}/hg</label><br/>
-                            <label class = "black-text text-darken-3">Diastolic:{dia[0][0]}/hg</label><br/>
-                            <label class = "black-text text-darken-3">Cholesterol:{chol[0][0]} mg/dl</label><br/>
-                            <label class = "black-text text-darken-3">Weight:{wei[0][0]} kg</label><br/>
-                            <label class = "black-text text-darken-3">BMI:{bmi[0][0]}</label><br/>
+                            <label class = "black-text text-darken-3 thin">Date: {created_at[0][0]}</label><br/>
+                            <label class = "black-text text-darken-3 thin">Systolic: {sys[0][0]}/hg</label><br/>
+                            <label class = "black-text text-darken-3 thin">Diastolic: {dia[0][0]}/hg</label><br/>
+                            <label class = "black-text text-darken-3 thin">Cholesterol: {chol[0][0]} mg/dl</label><br/>
+                            <label class = "black-text text-darken-3 thin">Weight: {wei[0][0]} kg</label><br/>
+                            <label class = "black-text text-darken-3 thin">BMI: {bmi[0][0]}</label><br/>
 
                             </div>
                   
 
                         </div>
                         <div class = "produkto11 left" style={{borderRadius:"6px"}}>
-                        <div class = "blue darken-4" id = "hu"><label class = "white-text" id = "titlesize"> <i className=" nav-gear	glyphicon glyphicon-heart white-text"></i>Your Doctor's Contacts</label></div>
+                        <div class = "blue darken-4" id = "hu"><label class = "white-text" id = "titlesize"> <i className=" nav-gear	glyphicon glyphicon-user white-text"></i>{'  '}Your Doctor's Contacts</label></div>
                         <div class = "left" id = "lefty">
                           <br></br>
-                            <label class = "black-text text-darken-3">Name:{this.state.medicOne.map(data=>data.name)}</label><br/>
-                            <label class = "black-text text-darken-3">Role:{this.state.medicOne.map(data=>data.position)}</label><br/>
-                            <label class = "black-text text-darken-3">Hospital:{this.state.medicOne.map(data=>data.hospital)}</label><br/>
-                            <label class = "black-text text-darken-3">Contact Number:{this.state.medicOne.map(data=>data.phone_number)}</label><br/>
-                            <label class = "black-text text-darken-3">Email:{this.state.medicOne.map(data=>data.email)}</label><br/>
+                          <label class = "black-text text-darken-3 thin">Name: {this.state.medicOne.map(data=>data.name)}</label><br/>
+                          <label class = "black-text text-darken-3 thin">Role: {this.state.medicOne.map(data=>data.position)}</label><br/>
+                          <label class = "black-text text-darken-3 thin">Hospital: {this.state.medicOne.map(data=>data.hospital)}</label><br/>
+                          <label class = "black-text text-darken-3 thin">Contact Number: {this.state.medicOne.map(data=>data.phone_number)}</label><br/>
+                          <label class = "black-text text-darken-3 thin">Email: {this.state.medicOne.map(data=>data.email)}</label><br/>
                             </div>  
                             </div>
                         

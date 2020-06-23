@@ -169,43 +169,43 @@ export class AdminCreatePatient extends Component{
         console.log(this.state.real_medics);
         const{name,birthdate,sex,address,hospital,position,password,email,phone_number,password2,username} = this.state
         return (<div>
-    <h6 className="header-form-text blue-text  text-darken-4 "><span className="glyphicon glyphicon-download-alt"></span>{'   '}Add MEDIC</h6>
+    <h6 className="header-form-text blue-text  text-darken-4 "><span className="glyphicon glyphicon-download-alt"></span>{'   '}Add Medics</h6>
             <div className="Form ">
                
             <form onSubmit={this.onSubmit}>
-                    <label><h6>Name</h6></label>
+                    <label><h6 className="black-text">Name</h6></label>
                     <input type = "text" name="name" onChange = {this.onChange} value={name}></input>
         {/* {this.state.errName?<h6 className="errsize red-text">Must not be blank or Name already exists</h6>:null} */}
                             <div className = "row">
                     <div className="col s3">
-                    <label><h6>Birthday</h6></label>
+                    <label><h6 className="black-text">Birthday</h6></label>
                     <input type = "text" name="birthdate" onChange = {this.onChange} value={birthdate}></input>
                     {/* {this.state.errBirthdate?<h6 className="errsize red-text">Must not be blank</h6>:null} */}
                     </div>
                     <div className="col s3">
-                    <label><h6>Sex</h6></label>
+                    <label><h6 className="black-text">Gender</h6></label>
                    
                     <input type = "text" name="sex" onChange = {this.onChange} value={sex}></input>
                     {/* {this.state.errSex?<h6 className="errsize red-text">Must not be blank</h6>:null} */}
                     </div>
                     <div className="col s3">
-                    <label><h6>Hospital</h6></label>
+                    <label><h6 className="black-text">Hospital</h6></label>
                     <input type = "text" name="hospital" onChange = {this.onChange} value={hospital}></input>
                     {/* {this.state.errHospital?<h6 className="errsize red-text">Must not be blank</h6>:null} */}
                     </div>
-                    <div className="col s3"><label><h6>Role</h6></label>
+                    <div className="col s3"><label><h6 className="black-text">Role</h6></label>
                     <input type="text" name="position" onChange = {this.onChange} value = {position} ></input>
                     {/* {this.state.errPosition?<h6 className="errsize red-text">Must not be blank</h6>:null} */}
                     </div>
                     </div>
                     <div className="row">
                     <div className="col s6">
-                    <label><h6>Address</h6></label>
+                    <label><h6 className="black-text">Address</h6></label>
                     <input type = "text" name="address" onChange = {this.onChange} value={address}></input>
                     {/* {this.state.errAddress?<h6 className="errsize red-text">Must not be blank</h6>:null} */}
                    </div>
                    <div className="col s6">
-                    <label><h6>Email</h6></label>
+                    <label><h6 className="black-text">Email</h6></label>
                        <input type ="text" name="email" onChange={this.onChange} value={email}></input>
                        {/* {this.state.errMail?<h6 className="errsize red-text">Must not be blank</h6>:null} */}
                        
@@ -213,17 +213,17 @@ export class AdminCreatePatient extends Component{
                    </div>
                     <div className="row">
                    
-                    <div className="col s4"><label><h6>Phone Number</h6></label>
+                    <div className="col s4"><label><h6 className="black-text">Phone Number</h6></label>
                     <input type = "text" name = "phone_number" onChange = {this.onChange} value ={phone_number}></input>
                     {/* {this.state.errPhone?<h6 className="errsize red-text">Must not be blank</h6>:null} */}
                     </div>
                     <div className="col s4">
-                    <label><h6 className="green-text">Usename</h6></label>
+                    <label><h6 className="black-text">Username</h6></label>
                     <input type = "text" name = "username" onChange={this.onChange} value={username}></input>
                     {/* {this.state.errUser?<h6 className="errsize red-text">Must not be blank or User Already Exist</h6>:null} */}
                     </div>
                     <div className="col s4">
-                    <label><h6 className="green-text">Password</h6></label>    
+                    <label><h6 className="black-text">Password</h6></label>    
                     <input type = "password" name = "password" onChange = {this.onChange} value = {password}></input>
                     {/* {this.state.errPass?<h6 className="errsize red-text">Must not be blank</h6>:null}             */}
                     </div>

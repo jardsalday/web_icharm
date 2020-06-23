@@ -256,31 +256,7 @@ getAge(bday){
                     {this.state.errBirthdate?<h6 className="errsize red-text">Must not be blank</h6>:null}
                     </div>
                 
-                    
-                    {/* <div className="col s1">
-                    <label><h6></h6></label>
-                    
-                    <div className=" monthplacer" onClick={()=>{this.setState({showMonth:!this.state.showMonth})}}>
-                    <i className="glyphicon glyphicon-collapse-down">{this.state.monthDisplay}</i></div>
-                    <div className={this.state.showMonth?"date":"hidedate"}>
-                        <ul>
-                            <li id="1" value={"January"} onClick = {this.monthClick.bind(this)}>January</li>
-                            <li id="2" onClick = {this.monthClick.bind(this)}>February</li>
-                            <li id="3" onClick = {this.monthClick.bind(this)}>March</li>
-                            <li id="4" onClick = {this.monthClick.bind(this)}>April</li>
-                            <li id="5" onClick = {this.monthClick.bind(this)}>May</li>
-                            <li id="6" onClick = {this.monthClick.bind(this)}>June</li>
-                            <li id="7" onClick = {this.monthClick.bind(this)}>July</li>
-                            <li id="8" onClick = {this.monthClick.bind(this)}>August</li>
-                            <li id="9" onClick = {this.monthClick.bind(this)}>September</li>
-                            <li id="10" onClick = {this.monthClick.bind(this)}>October</li>
-                            <li id="11" onClick = {this.monthClick.bind(this)}>Novermber</li>
-                            <li id="12" onClick = {this.monthClick.bind(this)}>December</li>
-                        </ul>
-                        
-                    </div>
-                    
-                    </div> */}
+                
                    
                     <div className="col s2">
                     <label><h6 style={{color:"black"}}>Height</h6></label>
@@ -288,25 +264,25 @@ getAge(bday){
                     {this.state.errHeight?<h6 className="errsize red-text">Must not be blank</h6>:null}
                     </div>
                     <div className="col s4">
-                    <label><h6 style={{color:"black"}}>Sex</h6></label>
+                    <label><h6 style={{color:"black"}}>Gender</h6></label>
                     <br></br>
                     <div onClick={this.setMale.bind(this)} className={this.state.clickSex?"btn blue darken-4   white-text":"btn black-text white"}>Male</div>
                     <div onClick={this.setFemale.bind(this)} className={this.state.clickSex?"btn white black-text":"btn blue darken-4 "}>Female</div>
                     
                     {this.state.errSex?<h6 className="errsize red-text">Must not be blank</h6>:null}
                     </div>
-                    <div className="col s3"><label><h6 style={{color:"black"}}>Diabetic?</h6></label>
+                    <div className="col s3"><label><h6 style={{color:"black"}}>Diabetic</h6></label>
                     <br></br>
                     <div onClick = {this.setDiaNo.bind(this)} className={this.state.clickDia?"btn blue darken-4 ":"btn white black-text"}>No</div>
                    
                     <div onClick = {this.setDiaYes.bind(this)} className={this.state.clickDia?"btn white black-text":"btn blue darken-4  "}>Yes</div>
                      {this.state.errDia?<h6 className="errsize red-text"  style={{color:"black"}}>Must not be blank</h6>:null}
                     </div>
-                    <div className="col s3"><label><h6 style={{color:"black"}}>Smoker?</h6></label>
+                    <div className="col s3"><label><h6 style={{color:"black"}}>Smoker</h6></label>
                     <br></br>
                     <div onClick = {this.setSmNo.bind(this)}  className={this.state.clickSmoke?"btn blue darken-4 ":"btn white black-text"}>No</div>
                     <div onClick = {this.setSmYes.bind(this)}  className={this.state.clickSmoke?"btn black-text white":"btn blue darken-4  white-text"}>Yes</div>
-                  {/* <div onClick = {this.setSmNo.bind(this)}  className={this.state.clickSmoke?"btn white black-text":"btn blue darken-4 "}>No</div> */}
+                 
                     {this.state.errDia?<h6  style={{color:"black"}} className="errsize red-text">Must not be blank</h6>:null}
                     </div>
                     </div>
@@ -317,7 +293,7 @@ getAge(bday){
                     {this.state.errAddress?<h6 className="errsize red-text">Must not be blank</h6>:null}
                    </div>
                    <div style={{color:"black"}}  className="col s6">
-                    <label><h6>Email</h6></label>
+                    <label><h6 className="black-text text-darken-4">Email</h6></label>
                        <input type ="text" name="email" onChange={this.onChange} value={email}></input>
                        {this.state.errMail?<h6 className="errsize red-text">Must not be blank</h6>:null}
                        
@@ -330,12 +306,12 @@ getAge(bday){
                     {this.state.errPhone?<h6 className="errsize red-text">Must not be blank</h6>:null}
                     </div>
                     <div className="col s4">
-                    <label><h6 className="blue-text text-darken-4">Username</h6></label>
+                    <label><h6 className="black-text text-darken-4">Username</h6></label>
                     <input type = "text" name = "username" onChange={this.onChange} value={username}></input>
                     {this.state.errUser?<h6 className="errsize red-text">Must not be blank or User Already Exist</h6>:null}
                     </div>
                     <div className="col s4">
-                    <label><h6 className="blue-text text-darken-4">Password</h6></label>    
+                    <label><h6 className="black-text text-darken-4">Password</h6></label>    
                     <input type = "password" name = "password" onChange = {this.onChange} value = {password}></input>
                     {this.state.errPass?<h6 className="errsize red-text">Must not be blank</h6>:null}            
                     </div>

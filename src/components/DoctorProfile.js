@@ -152,7 +152,6 @@ export class DoctorProfile extends Component{
                                 <i class="material-icons">menu</i>
                                 </a>
                                 <ul class="right hide-on-med-and-down">
-                                <li><NavLink to ="/adminhome" className="blue-text text-darken-4" ><span className=" blue-text text-darken-4 glyphicon glyphicon-home"></span>Home</NavLink></li>
              			<li> <Link to ="/adminpatients" className="blue-text text-darken-4" ><span className=" blue-text text-darken-4 glyphicon glyphicon-th-list"></span>Patients Records</Link></li>
                    <li> <Link to ="/adminmedics" className="blue-text text-darken-4"  ><span className="blue-text text-darken-4 glyphicon glyphicon-globe"></span>Medics Records</Link></li>
                    <li><NavLink to ="/medicprofile" className="btn blue darken-4 white-text text-darken-1" ><span className="glyphicon glyphicon-user"></span> Profile</NavLink></li>
@@ -185,7 +184,7 @@ export class DoctorProfile extends Component{
                         }
                         <ul class="sidenav" id="mobile-links">
                           <li><Link to ="/patient"></Link></li>
-            			<li> <Link to ="/admin">Admin</Link></li>
+            			        <li> <Link to ="/admin">Admin</Link></li>
 
                                  <li><a href="/" class="btn white red-text text-lighten-2">Logout</a></li>
                          </ul> <div className ="col"><br/></div>
@@ -202,7 +201,7 @@ export class DoctorProfile extends Component{
                        
                           <div className="row center-align" style={{backgroundColor:"lightgrey",width:"100px",height:"100px"}}><span style={{padding:"15px",fontSize:"70px"}} className="white-text glyphicon glyphicon-user"></span></div>
                            <div className="row center-align">
-        <h4 className=" blue-text text-darken-4 " style={{textDecoration:"underline"}}>{this.props.medicOnes.map(data=>data.name)}</h4>
+        <h4 className=" blue-text text-darken-4 " >{this.props.medicOnes.map(data=>data.name)}</h4>
                           <h6 className="black-text">{this.props.medicOnes.map(data=>data.position)}</h6>
                            </div>
                            <div className="">
