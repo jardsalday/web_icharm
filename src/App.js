@@ -65,21 +65,21 @@ export class App extends Component {
 
 
    {/*Medic Pages*/}
-   <Route path="/patient" exact component={PatientComponent}/>
-   <Route path="/viewdetails/:patientID" component={EditPatient}/>
-   <Route path = "/admin" component={Admin}/>
+   <MedicRoute path="/patient" exact component={PatientComponent}/>
+   <MedicRoute path="/viewdetails/:patientID" component={EditPatient}/>
+   <MedicRoute path = "/admin" component={Admin}/>
    <Route path = "/patientedit/:patientID" component={PatientEdit}/>
-   <Route path = "/patientedit" component={PatientEdit}/>
+   <MedicRoute path = "/patientedit" component={PatientEdit}/>
    <Route path="/medicprofile" component={DoctorProfile}/>
-   <Route path='/listeditpatient/:patientID' component = {ListEditPatient}/>
+   <MedicRoute path='/listeditpatient/:patientID' component = {ListEditPatient}/>
   {/* // Admin Pages */}
-  <Route path = '/adminmedics' component = {AdminMedicalWorkers}/>{/**Admin */}
-   <Route path = '/adminpatients' component = {AdminPatients}/>{/**Admin */}
-   <Route path =  '/patienteditadmin' component = {PatientEditAdmin}/>
-   <Route path = '/admineditmedic/:patientID' component = {AdminEditMedic}/>{/**Admin */}
+  <AdminRoute path = '/adminmedics' component = {AdminMedicalWorkers}/>{/**Admin */}
+   <AdminRoute path = '/adminpatients' component = {AdminPatients}/>{/**Admin */}
+   <AdminRoute path =  '/patienteditadmin' component = {PatientEditAdmin}/>
+   <AdminRoute path = '/admineditmedic/:patientID' component = {AdminEditMedic}/>{/**Admin */}
    <Route path = '/admineditpatient/:patientID' component = {AdminEditPatient}/>{/**Admin */}
-   <Route path = '/adminprofile' component={AdminProfile}/>
-   <Route path='/adminhome' component={AdminHome}/>
+   <AdminRoute path = '/adminprofile' component={AdminProfile}/>
+   <AdminRoute path='/adminhome' component={AdminHome}/>
   {/* // PatientRoute */}
    <PrivateRoute path="/viewpatient" component={ViewPatient}/>
    <PrivateRoute path = "/addmeasure" component = {MeasureAdd}/>

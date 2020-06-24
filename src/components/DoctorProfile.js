@@ -227,7 +227,7 @@ export class DoctorProfile extends Component{
                            </div>
                            <div className="col s6">
                           <li><h5>{this.state.edit?<h5>Retype Password</h5>:null}
-                          <u className="email-profile grey-tex">{'   '}{this.state.edit?<input type="password" style={{color:"#0d47a1 "}}  name="passwordsec" onChange={this.onChange} value={passwordsec}></input>:null}</u></h5></li><br/><br/>
+                          <u className="email-profile grey-tex">{'   '}{this.state.edit?<input type="password"  name="passwordsec" onChange={this.onChange} value={passwordsec}></input>:null}</u></h5></li><br/><br/>
                           {this.state.errPassword?<h6 className="errsize red-text">Password do not matched</h6>:this.state.noPass?<h6 className="errsize red-text">Password fields must not be empty</h6>:null}
                            </div>
                            </div>

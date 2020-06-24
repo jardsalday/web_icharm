@@ -165,7 +165,7 @@ export class UserProfile extends Component{
                          <div className={this.state.edit?"col-lg-5  userprofile2 card-panel white ":"col-lg-5 col-sm-5 userprofile2 card-panel white"}
                          style={{borderRadius:"5px",border:"1px solid #0d47a1",borderTop:"8px solid #0d47a1",borderBottom:"8px solid #0d47a1"}}>
                         
-                           <button className={this.state.edit?"editprofile btn green lighten-2 green-text right":"editprofile btn blue darken-4 green-text right"} onClick={this.state.edit?this.savePassword.bind(this):this.editData.bind(this)
+                           <button className={this.state.edit?"editprofile btn green lighten-2 black-text right":"editprofile btn blue darken-4 black-text right"} onClick={this.state.edit?this.savePassword.bind(this):this.editData.bind(this)
                              
                              }>{this.state.edit?<i className=" nav-gear	glyphicon glyphicon-ok white-text"></i>:<i className=" nav-gear	glyphicon glyphicon-pencil white-text"></i>}</button>
                          <div>{'   '  }
@@ -178,24 +178,24 @@ export class UserProfile extends Component{
                            <div className="">
                            </div>
                           
-                           </div>  <div className={this.state.edit?"card-edit-pro":"card-pro"}  style={{borderRadius:"6px"}}><ul className={this.state.edit?"puserprofile green-text text-darken-1":" userprofile white-text text-darken-1"} style={this.state.edit?null:{paddingLeft:"20px",paddingTop:"20px"}}>
+                           </div>  <div className={this.state.edit?"card-edit-pro":"card-pro"}  style={{borderRadius:"6px"}}><ul className={this.state.edit?"puserprofile black-text text-darken-1":" userprofile white-text text-darken-1"} style={this.state.edit?null:{paddingLeft:"20px",paddingTop:"20px"}}>
                              
-        <li><h5><i className="glyphicon glyphicon-user white-text"></i> Username:<label className={this.state.edit?"blue-text text-darken-4":"white-text"}>{this.props.user.username}</label></h5></li> 
+        <li><h5><i className="glyphicon glyphicon-user white-text thin"></i> Username:<label className={this.state.edit?"black-text text-darken-4 thin":"white-text thin"}>{this.props.user.username}</label></h5></li> 
                            <li><h5><i className="	glyphicon glyphicon-envelope white-text"></i> Email:<uu     className="email-profile white-text">{'                                                  '}
-                           {this.state.edit?<input type="text" name="email" style={{color:"green"}} onChange={this.onChange} value={email}></input>:this.props.patientOnes.map(data=>data.email)}</uu>
+                           {this.state.edit?<input type="text" name="email" style={{color:"black"}} onChange={this.onChange} value={email}></input>:this.props.patientOnes.map(data=>data.email)}</uu>
                            </h5></li>
-                           <li><h5><i className="glyphicon glyphicon-earphone white-text"></i> Phone Number:<uu     className="white-text">{'   '}{this.state.edit?<input type="text" style={{color:"green"}} name="phone_number" onChange={this.onChange} value={phone_number}></input>:this.props.patientOnes.map(data=>data.phone_number)}</uu></h5></li>
-                                            <li><h5><i className="glyphicon glyphicon-globe white-text"></i> Address:<uu     className="email-profile white-text">{'   '}{this.state.edit?<input style={{color:"green"}} type="text" name="address" onChange={this.onChange} value={address}></input>:this.props.patientOnes.map(data=>data.address)}</uu></h5></li>
+                           <li><h5><i className="glyphicon glyphicon-earphone white-text"></i> Phone Number:<uu     className="white-text">{'   '}{this.state.edit?<input type="text" style={{color:"black"}} name="phone_number" onChange={this.onChange} value={phone_number}></input>:this.props.patientOnes.map(data=>data.phone_number)}</uu></h5></li>
+                                            <li><h5><i className="glyphicon glyphicon-globe white-text thin"></i> Address:<uu     className="email-profile white-text">{'   '}{this.state.edit?<input style={{color:"black"}} type="text" name="address" onChange={this.onChange} value={address}></input>:this.props.patientOnes.map(data=>data.address)}</uu></h5></li>
                                             <li>{this.state.edit?<h5>Optional:</h5>:null}{this.state.errPassword?<h6 className="errsize red-text">Passwords does not match</h6>:this.state.noPass?<h6 className="errsize red-text">Password fields must not be empty</h6>:null}</li>                
                             <div className="row">
                            
                             <div className="col s6">
                           <li><h5>{this.state.edit?<h5>New Password</h5>:null}
-                          <uu     className="email-profile white-text">{'   '}{this.state.edit?<input type="text" name="password" onChange={this.onChange} value={password}></input>:null}</uu></h5></li><br/><br/>
+                          <uu     className="email-profile black-text">{'   '}{this.state.edit?<input type="password" name="password" onChange={this.onChange} value={password}></input>:null}</uu></h5></li><br/><br/>
                            </div>
                            <div className="col s6">
                           <li><h5>{this.state.edit?<h5>Retype Password</h5>:null}
-                          <uu     className="email-profile white-text">{'   '}{this.state.edit?<input type="text" name="passwordsec" onChange={this.onChange} value={passwordsec}></input>:null}</uu></h5></li><br/><br/>
+                          <uu     className="email-profile black-text">{'   '}{this.state.edit?<input type="password" name="passwordsec" onChange={this.onChange} value={passwordsec}></input>:null}</uu></h5></li><br/>
                           
                            </div>
                            </div>

@@ -58,7 +58,7 @@ export class AboutUs extends Component{
                             <div class = "produkto1 center">
                         
                             </div>
-                    <div class = "produkto11 center">
+                    <div class = "produkto13 center">
                     
                     <div class="slider">
                    
@@ -71,9 +71,9 @@ export class AboutUs extends Component{
                             cancelOnInteraction={false} // should stop playing on user interaction
                             interval={6000}
                         >
-                            <div data-src="https://i.ibb.co/rFBLN82/jaredd-1.png" />
-                                <div data-src="https://i.ibb.co/Z6HHd2c/vincent.png" />
-                                <div data-src="https://i.ibb.co/z69TWh6/mark-1.png" />
+                            <div data-src="https://i.ibb.co/YQmphgm/jaredd-1.jpg" />
+                                <div data-src="https://i.ibb.co/3dMVCLq/jaredd-1-2.jpg" />
+                                <div data-src="https://i.ibb.co/c296Xsc/jaredd-1-1.jpg" />
                         </AutoplaySlider>
                             </div>
                         </div>

@@ -224,11 +224,10 @@ constructor(props){
                                 <i class="material-icons">menu</i>
                                 </a>
                                 <ul class="right hide-on-med-and-down">
-                                <li><NavLink to ="/adminprofile"  className="blue-text text-darken-4" ><span className=" blue-text text-darken-4glyphicon glyphicon-home"></span>Home</NavLink></li>
              			<li> <Link to ="/adminpatients" className="btn blue darken-4 white-text text-darken-1" ><span className="glyphicon glyphicon-th-list"></span>Patients Records</Link></li>
-                   <li> <Link to ="/adminmedics" className="blue-text text-darken-4"><span className=" blue-text text-darken-4glyphicon glyphicon-globe"></span>Medics Records</Link></li>
-                   <li><NavLink to ="/adminprofile" className="blue-text text-darken-4"  ><span className="blue-text text-darken-4glyphicon glyphicon-user"></span> Profile</NavLink></li>
-<li><a onClick={this.props.logout.bind(this)} href="/login" class="blue-text text-darken-4"><span className="blue-text text-darken-4glyphicon glyphicon-log-out"></span> Logout</a></li>
+                   <li> <Link to ="/adminmedics" className="blue-text text-darken-4"><span className=" blue-text text-darken-4 glyphicon glyphicon-globe"></span>Medics Records</Link></li>
+                   <li><NavLink to ="/medicprofile" className="blue-text text-darken-4"  ><span className="blue-text text-darken-4 glyphicon glyphicon-user"></span> Profile</NavLink></li>
+<li><a onClick={this.props.logout.bind(this)} href="/login" class="blue-text text-darken-4"><span className="blue-text text-darken-4 glyphicon glyphicon-log-out"></span> Logout</a></li>
                                 </ul>
                             </div>
                             </nav>

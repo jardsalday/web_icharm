@@ -406,7 +406,7 @@ handleClick(event) {
                            <div className="col-lg-2 new_measure_card  white" style={{textAlign:"center", borderTopLeftRadius:"5px",borderTopRightRadius:"5px",borderBottomLeftRadius:"5px",borderBottomRightRadius:"5px",borderBottom:"5px solid #0d47a1 "}}>
                 
                <div className="blue  darken-4 " style={{paddingLeft:"10px",borderTopLeftRadius:"5px",borderTopRightRadius:"5px"}}>
-              <label><h6 className="white-text text-darken-4" style={{fontSize:"20px"}}>CHOLESTEROL:<test className="white-text text-darken-4">{this.state.displaychol}{"  "}hg/dl</test></h6></label>
+              <label><h6 className="white-text text-darken-4" style={{fontSize:"20px"}}>CHOL:<test className="white-text text-darken-4">{this.state.displaychol}{"  "}hg/dl</test></h6></label>
                </div>
                 <Line option={{
                     responsive:false

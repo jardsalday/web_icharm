@@ -1260,6 +1260,14 @@ a:link{
     padding:0px;
 }
 
+.produkto13{
+    flex:3;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-right:10px;
+    width: 900px;
+}
+
 #hu{
     margin-left: 0px;
 }
