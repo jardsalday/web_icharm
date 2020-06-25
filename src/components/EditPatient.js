@@ -393,7 +393,7 @@ handleClick(event) {
                 </div>
                            <div className="col-lg-2 new_measure_card  white" style={{textAlign:"center", borderTopLeftRadius:"5px",borderTopRightRadius:"5px",borderBottomLeftRadius:"5px",borderBottomRightRadius:"5px",borderBottom:"5px solid #0d47a1 "}}>
                 <div className="blue darken-4" style={{paddingLeft:"10px",borderTopLeftRadius:"5px",borderTopRightRadius:"5px"}}>          
-              <label><h6 className="white-text text-darken-4" style={{fontSize:"20px"}}>WEIGHT:<test className="white-text text-darken-4">{this.state.displayweight}{" "}kg</test> </h6></label>
+              <label><h6 className="white-text text-darken-4 thin" style={{fontSize:"20px"}}>WEIGHT: <test className="white-text text-darken-4 thin">{this.state.displayweight}{" "}kg</test> </h6></label>
                 </div>
                 <Line option={{
                     responsive:false
@@ -406,7 +406,7 @@ handleClick(event) {
                            <div className="col-lg-2 new_measure_card  white" style={{textAlign:"center", borderTopLeftRadius:"5px",borderTopRightRadius:"5px",borderBottomLeftRadius:"5px",borderBottomRightRadius:"5px",borderBottom:"5px solid #0d47a1 "}}>
                 
                <div className="blue  darken-4 " style={{paddingLeft:"10px",borderTopLeftRadius:"5px",borderTopRightRadius:"5px"}}>
-              <label><h6 className="white-text text-darken-4" style={{fontSize:"20px"}}>CHOL:<test className="white-text text-darken-4">{this.state.displaychol}{"  "}hg/dl</test></h6></label>
+              <label><h6 className="white-text text-darken-4 thin" style={{fontSize:"20px"}}>CHOL: <test className="white-text text-darken-4 thin">{this.state.displaychol}{"  "}hg/dl</test></h6></label>
                </div>
                 <Line option={{
                     responsive:false
@@ -419,7 +419,7 @@ handleClick(event) {
                            <div className="col-lg-4 new_measure_card_risk white" style={{paddingLeft:"10px",borderBottom:"5px ",borderTopLeftRadius:"5px",borderTopRightRadius:"5px"}}  style={this.state.edit_risk?{height:"550px"}:null,{borderRadius:"10px"}}>
                
        
-                           {/* <div className="col-lg-4 row new_measure_card_risk  white"> */}
+                    
                            <div className={this.state.edit_risk?"col-lg-6":"graphshow"}>
                              <label for="risk_proba1"><span className="glyphicon glyphicon-exclamation-sign blue-text text-darken-4"><b>HIGH RISK:</b></span> </label>
                              <input  onChange={this.onChange} type="text" name="risk_proba1" value={risk_proba1} placeholder="HIGH RISK PROBABILITY"/>
@@ -431,8 +431,7 @@ handleClick(event) {
                              <input  onChange={this.onChange} type="text" name="risk_proba0" value={risk_proba0} placeholder="LOW RISK PROBABILITY"/>
                              
                              </div> <div className="blue darken-4  col-lg-12" style={{borderTopRightRadius:"5px",borderTopLeftRadius:"5px",paddingLeft:"20px",borderBottom:"2px solid lightgrey"}}>
-             {/* <div className="cyan lighten-1 col-lg-12" style = {{textAlign:"center"}}> */}
-              <label><h6 className="white-text text-darken-4 " style={{fontSize:"20px"}}>RISK PROBABILITY:<test className="white-text text-darken-4">HI={this.state.displayrisk1}%/LO={this.state.displayrisk0  }%</test></h6></label>
+             <label><h6 className="white-text text-darken-4 thin" style={{fontSize:"20px"}}><test className="white-text text-darken-4 thin">{this.state.displayrisk0>50?"LOW RISK":"HIGH RISK"}(LOW: {this.state.displayrisk0}%, HIGH: {this.state.displayrisk1}%)</test></h6></label>
               <span className=" blue darken-4  lighten-3 right white-text" style={{marginTop:"5px"}} onClick={this.state.edit_risk?this.saveNewRisk.bind(this):()=>{this.setState({edit_risk:!this.state.edit_risk})}}> <span className="glyphicon glyphicon-pencil white-text text-darken-4"></span></span>
              </div>
                 <Line option={{
