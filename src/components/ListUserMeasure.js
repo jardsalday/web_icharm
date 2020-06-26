@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {getSpecPatient} from '../actions/assessActions';
+// import {getSpecPatient} from '../actions/assessActions';
 import {Link,NavLink} from 'react-router-dom';
 import patient from '../reducers/patient';
 import '../App.css'
@@ -15,8 +15,10 @@ import RiskGraph from './RiskGraph';
 import Description from './Description';
 import { CSSTransitionGroup } from 'react-transition-group';
 import {Line} from 'react-chartjs-2';
-import {getUserMeasure,addPatients} from '../actions/patientActions';
+import {getUserMeasure,getSpecPatient} from '../actions/patientActions';
 import {logout} from '../actions/auth';
+import {loadUser} from '../actions/auth';
+
 
 export class ListUserMeasure extends Component{
  
@@ -47,8 +49,8 @@ export class ListUserMeasure extends Component{
  
     static propTypes = {
         measures: PropTypes.array.isRequired,
-        logout:PropTypes.func.isRequired
-      
+        logout:PropTypes.func.isRequired,
+        patientOnes:PropTypes.array.isRequired
       
     }
  
@@ -67,6 +69,7 @@ export class ListUserMeasure extends Component{
 
   componentDidMount(){
       this.props.getUserMeasure();
+      this.props.getSpecPatient(this.props.user.id);
 
     
   }
@@ -132,9 +135,13 @@ export class ListUserMeasure extends Component{
                
                 {/* <label className="blue-text  text-darken-4">Name:</label>
                <label className="black-text">{created_at[0][0]}</label> */}
-               <span className="blue-text  text-darken-4 glyphicon glyphicon-calendar"></span>
-               <label className="blue-text  text-darken-4">Last Updated:</label>
+                <label className="blue-text text-darken-4">Name:</label>
+               <label style={{}} className=" black-text"> { this.props.patientOnes.map(data=>data.name)} </label>
+               <span style={{marginLeft:"100px"}} className="blue-text  text-darken-4 glyphicon glyphicon-calendar"></span>
+              
+               <label  className="blue-text  text-darken-4">Last Updated:</label>
                <label className="black-text">{created_at[0][0]}</label>
+              
                <div className="list-graph right col" style={{marginRight:"0px"}} ><button id = "padright" className="list btn blue darken-4 lighten-3"><i className=" white-text glyphicon glyphicon-th-list"></i>{'  '}
         <Link to ="/listusermeasure">List</Link></button>
         <button className="chart btn blue darken-4 lighten-3"id = "padright"><i className=" white-text glyphicon glyphicon-signal"></i>{'  '}<Link to="/usermeasures">Graph </Link></button>
@@ -230,10 +237,12 @@ export class ListUserMeasure extends Component{
 }
 
 const mapStateToProps = state =>({
-    measures :state.measurereducer.measure
+    measures :state.measurereducer.measure,
+    patientOnes:state.patientOnereducer.patientOne,
+    user :state.userreducer.user
 
 });
 
-export default connect(mapStateToProps,{getUserMeasure,logout})(ListUserMeasure);
+export default connect(mapStateToProps,{loadUser,getSpecPatient,getUserMeasure,logout})(ListUserMeasure);
 /**
   */

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {getSpecPatient} from '../actions/assessActions';
+// import {getSpecPatient} from '../actions/assessActions';
 import {Link,NavLink} from 'react-router-dom';
 import patient from '../reducers/patient';
 import '../App.css'
@@ -15,8 +15,9 @@ import RiskGraph from './RiskGraph';
 import Description from './Description';
 import { CSSTransitionGroup } from 'react-transition-group';
 import {Line} from 'react-chartjs-2';
-import {getUserMeasure,addPatients} from '../actions/patientActions';
+import {getUserMeasure,getSpecPatient} from '../actions/patientActions';
 import {logout} from '../actions/auth';
+import {loadUser} from '../actions/auth';
 
 export class Measures extends Component{
  
@@ -35,7 +36,9 @@ export class Measures extends Component{
         desc:{},
         refresh:false,
         show:false,
-        display:true
+        display:true,
+        displayrisk0:null,
+        displayrisk1:null
         
         
 
@@ -43,15 +46,20 @@ export class Measures extends Component{
 
     static propTypes = {
         measures: PropTypes.array.isRequired,
-        logout:PropTypes.func.isRequired
+        logout:PropTypes.func.isRequired,
+        patientOnes:PropTypes.array.isRequired,
        
       
     }
  
  loadMeasures(){
     this.props.getUserMeasure();
+    const lat_risk1 = this.props.measures.sort((a,b)=>(-1* (b.id-a.id))).map(data=>data.risk_proba1);
+    const lat_risk0 = this.props.measures.sort((a,b)=>(-1* (b.id-a.id))).map(data=>data.risk_proba0);
+
     this.setState({
-      
+        displayrisk1:lat_risk1[lat_risk1.length-1],
+        displayrisk0:lat_risk0[lat_risk0.length-1],
      risk:{
        labels:this.props.measures.sort((a,b)=>(-1* (b.id-a.id))).map(test=>test.created_at),
    datasets:[
@@ -169,7 +177,8 @@ export class Measures extends Component{
 
   componentDidMount(){
     
-    this.loadMeasures()
+    this.loadMeasures();
+    this.props.getSpecPatient(this.props.user.id);
     
   }
   showAll(){
@@ -209,10 +218,12 @@ export class Measures extends Component{
                          </ul>           
                          <div className="row">
          <div className=" white col-lg-10 cold-md-12 col-sm-12 col-6   date-time-card"  style={{borderRadius:"5px",border:"1px solid #0d47a1",borderBottom:"3px solid #0d47a1",borderTop:"3px solid #0d47a1"}} >
-               <span className="blue-text text-darken-4 glyphicon glyphicon-calendar"></span>
-                <label className="blue-text text-darken-4">Last Updated:</label>
+         <label className="blue-text text-darken-4">Name:</label>
+               <label style={{}} className=" black-text"> { this.props.patientOnes.map(data=>data.name)} </label>
+               <span style={{marginLeft:"100px"}} className="blue-text  text-darken-4 glyphicon glyphicon-calendar"></span>
+              
+               <label  className="blue-text  text-darken-4">Last Updated:</label>
                <label className="black-text">{created_at[0][0]}</label>
-            
 
                <div className="right col" style={{marginRight:"0px"}} ><button id = "padright" className="list btn blue darken-4 lighten-3"><i className=" white-text glyphicon glyphicon-th-list"></i>{'  '}
         <Link to ="/listusermeasure">List </Link></button>
@@ -297,7 +308,7 @@ export class Measures extends Component{
           </div></div>
           <br/>
              <div className=" risk col-lg-5 col-md-12 col-sm-12"> 
-                <label className="blue-text text-darken-4">CVD RISK:</label>
+        <label className="blue-text text-darken-4">CVD RISK:{this.state.displayrisk0>=50?"LOW RISK":"HIGH RISK"}(Low:{this.state.displayrisk0},High:{this.state.displayrisk1})</label>
                 <Line
                 data={this.state.risk}
                 height='800px'
@@ -328,9 +339,11 @@ export class Measures extends Component{
 }
 
 const mapStateToProps = state =>({
-    measures :state.measurereducer.measure
+    measures :state.measurereducer.measure,
+    patientOnes:state.patientOnereducer.patientOne,
+    user :state.userreducer.user
 
 });
-export default connect(mapStateToProps,{getUserMeasure,logout})(Measures);
+export default connect(mapStateToProps,{loadUser,getUserMeasure,getSpecPatient,logout})(Measures);
 /**
   */

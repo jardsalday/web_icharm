@@ -431,7 +431,7 @@ handleClick(event) {
                              <input  onChange={this.onChange} type="text" name="risk_proba0" value={risk_proba0} placeholder="LOW RISK PROBABILITY"/>
                              
                              </div> <div className="blue darken-4  col-lg-12" style={{borderTopRightRadius:"5px",borderTopLeftRadius:"5px",paddingLeft:"20px",borderBottom:"2px solid lightgrey"}}>
-             <label><h6 className="white-text text-darken-4 thin" style={{fontSize:"20px"}}><test className="white-text text-darken-4 thin">{this.state.displayrisk0>50?"LOW RISK":"HIGH RISK"}(LOW: {this.state.displayrisk0}%, HIGH: {this.state.displayrisk1}%)</test></h6></label>
+             <label><h6 className="white-text text-darken-4 thin" style={{fontSize:"20px"}}><test className="white-text text-darken-4 thin">{this.state.displayrisk0>=50?"LOW RISK":"HIGH RISK"}(LOW: {this.state.displayrisk0}%, HIGH: {this.state.displayrisk1}%)</test></h6></label>
               <span className=" blue darken-4  lighten-3 right white-text" style={{marginTop:"5px"}} onClick={this.state.edit_risk?this.saveNewRisk.bind(this):()=>{this.setState({edit_risk:!this.state.edit_risk})}}> <span className="glyphicon glyphicon-pencil white-text text-darken-4"></span></span>
              </div>
                 <Line option={{
